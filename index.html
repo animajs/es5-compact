@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>es5-compat mobile</title>
+<style>
+  body{font-size:14px;}
+  #compat-table{border-spacing:0;}
+  #compat-table td{padding:1px 2px;border:1px solid #FFF;}
+  #compat-table thead{color:#00F;font-weight:700;text-align:center;}
+  #compat-table span{display:inline-block;padding-top:2px;width:100%;min-width:50px;text-align:center;background:#1A1;color:#FFF;}
+  .b{background:#FC1!important;}
+  .t{background:#19C!important;}
+  .n{background:#E31!important;}
+  .u{background:#333!important;}
+  #intro{padding:0;list-style:none;}
+  #intro li{padding:2px 0;}
+  #intro span{display:inline-block;margin-right:5px;padding-top:2px;width:50px;text-align:center;background:#1A1;color:#FFF;}
+  span:hover{font-weight:700;box-shadow:0 0 5px rgba(0, 0, 0, .5);text-shadow:1px 1px 2px rgba(0, 0, 0, .5);}
+</style>
+</head>
+<body>
+<div id="qrcode" style="position:absolute;top:0;right:0;width:256px;height:256px;"></div>
+<p><a href="tests/" target="_blank" title="es5-compat native tests">es5-compat native tests</a></p>
+<p><a href="es5-shim-mobile.js" target="_blank" title="es5-shim-mobile.js">download es5-shim-mobile.js</a></p>
+<p><a href="tests/fix.html" target="_blank" title="es5-shim-mobile.js tests">es5-shim-mobile.js tests</a></p>
+<p><a href="es5-anima.js" target="_blank" title="es5-shim-mobile.js">download es5-anima.js</a>(String.prototype.split
+  String.prototype.trim
+  Array.prototype.splice
+  Date.parse
+  Number.prototype.toFixed
+  Function.prototype.bind)</p>
+<p><a href="tests/anima.html" target="_blank" title="es5-shim-mobile.js tests">es5-anima.js tests</a></p>
+<ul id="intro">
+  <li><span>Y</span>support and pass all tests.</li>
+  <li><span class="t">T</span>support without detail tests.</li>
+  <li><span class="b">B</span>support but with some bugs.</li>
+  <li><span class="n">N</span>no support.</li>
+  <li><span class="u">U</span>unknow.</li>
+</ul>
+<table id="compat-table">
+  <thead>
+    <tr>
+      <td></td>
+      <td>Chrome 33</td>
+      <td>Firefox 27</td>
+      <td>Andriod 4.x</td>
+      <td>Andriod 2.3</td>
+      <td>IE 10 mobile</td>
+      <td>iOS 7.x</td>
+      <td>iOS 6.x</td>
+      <td>iOS 4.2</td>
+      <td>Andriod UC</td>
+      <td>Andriod QQ</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Array.isArray</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.every</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.filter</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.forEach</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.indexOf</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.lastIndexOf</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.map</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.reduce</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.reduceRight</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.some</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.splice</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Array.prototype.unshift</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Date.now</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Date.parse</td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+    </tr>
+    <tr>
+      <td>Date.prototype.toISOString</td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Date.prototype.toJSON</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Number.prototype.toFixed</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Function.prototype.bind</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.create</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.defineProperties</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.defineProperty</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.getOwnPropertyDescriptor</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.getOwnPropertyNames</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.getPrototypeOf</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.freeze</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.isExtensible</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.isFrozen</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.isSealed</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.keys</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.preventExtensions</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Object.seal</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="n">N</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>parseInt</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>String.prototype.split</td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+      <td><span class="b">B</span></td>
+    </tr>
+    <tr>
+      <td>String.prototype.substr</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>String.prototype.trim</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span class="b">B</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>getter</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>setter</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Property access on strings</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Reserved words as property names</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Zero-width chars in identifiers</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Immutable undefined</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+    <tr>
+      <td>Strict mode</td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+      <td><span>Y</span></td>
+    </tr>
+  </tbody>
+</table>
+<script src="jquery-2.1.0.min.js"></script>
+<script src="jquery.qrcode.min.js"></script>
+<script>$('#qrcode').qrcode({width:256,height:256,text:document.URL});</script>
+</body>
+</html>
