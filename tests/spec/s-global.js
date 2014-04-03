@@ -117,4 +117,24 @@ describe("new feature", function() {
       }()).toBeTruthy();
     });
   });
+  describe("json support", function() {
+    it("#parse", function() {
+      expect(function () {
+        var result;
+        try {
+          result = JSON.parse('{"a":1}');
+        } catch (e) { }
+        return result;
+      }()).toBeTruthy();
+    });
+    it("#stringify", function() {
+      expect(function () {
+        var result;
+        try {
+          result = JSON.stringify({"a":1});
+        } catch (e) { }
+        return result;
+      }()).toBeTruthy();
+    });
+  });
 });
