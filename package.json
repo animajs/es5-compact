@@ -15,5 +15,8 @@
   },
   "bugs": {
     "url": "https://github.com/animajs/es5-compact/issues"
+  },
+  "spm": {
+    "output": ["es5-anima.js", "es5-shim-mobile.js"]
   }
 }
