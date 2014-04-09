@@ -1,0 +1,19 @@
+{
+  "name": "es5-compact",
+  "family": "anima",
+  "version": "1.0.0",
+  "keywords": ["es5"],
+  "description": "提供mobile端es5的兼容支持",
+  "homepage": "https://github.com/animajs/es5-compact",
+  "author": "army8735 <army8735@qq.com>",
+  "maintainers": [
+    "army8735 <army8735@qq.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/animajs/es5-compact"
+  },
+  "bugs": {
+    "url": "https://github.com/animajs/es5-compact/issues"
+  }
+}
